@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools"]
+
+[project]
+name = "logging_demo"
+version = "0.1.0"
+dynamic = [
+    "dependencies"
+]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[project.scripts]
+logging_demo = "logging_demo.__main__:main"
